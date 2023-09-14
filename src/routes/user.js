@@ -1,4 +1,5 @@
-const Router = require('express').Router;
+import { Router } from 'express';
+
 const router = Router();
 
 router.get('/', (req, res) => {
@@ -9,4 +10,4 @@ router.get('/:userId', (req, res) => {
   return res.send(req.context.models.users[req.params.userId]);
 });
 
-module.exports = router;
+export default router;

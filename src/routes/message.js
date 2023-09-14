@@ -1,5 +1,5 @@
-const uuidv4 = require('uuid').v4;
-const Router = require('express').Router;
+import { v4 as uuidv4 } from 'uuid';
+import { Router } from 'express';
 
 const router = Router();
 
@@ -18,13 +18,15 @@ router.post('/', (req, res) => {
     text: req.body.text,
     userId: req.context.me.id,
   };
+  req.context.models.messages[id] = message;
+  return res.send(message);
 });
 
 router.delete('/:messageId', (req, res) => {
   const { [req.params.messageId]: message, ...otherMessages } =
     req.context.models.messages;
-
   req.context.models.messages = otherMessages;
-
   return res.send(message);
 });
+
+export default router;
