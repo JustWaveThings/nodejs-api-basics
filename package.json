@@ -1,0 +1,25 @@
+{
+  "name": "nodejs-api-basics",
+  "version": "1.0.0",
+  "description": "https://www.theodinproject.com/lessons/nodejs-api-basics",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.22.19",
+    "@babel/node": "^7.22.19",
+    "@babel/preset-env": "^7.22.15",
+    "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "uuid": "^9.0.1"
+  }
+}
